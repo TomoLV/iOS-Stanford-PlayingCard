@@ -48,6 +48,10 @@ class PlayingCardView: UIView {
         }
     }
     
+    override var collisionBoundsType: UIDynamicItemCollisionBoundsType {
+        return .ellipse
+    }
+    
     private func centeredAttributedString(_ string: String, fontSize: CGFloat) -> NSAttributedString {
         var font = UIFont.preferredFont(forTextStyle: .body).withSize(fontSize)
         // This line addresses font scaling done in Accessibility Settings in iOS
